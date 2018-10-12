@@ -1,0 +1,108 @@
+{"level":"INFO","timestamp":"2018-10-11 21:36:03.312","file":"dapphouse/main.go:52","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-10-11 21:36:03.314","file":"dapphouse/main.go:49","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-10-12 18:09:50.010","file":"dapphouse/main.go:52","msg":"start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-10-12 18:09:50.011","file":"dapphouse/main.go:68","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-10-12 18:09:51.012","file":"dapphouse/main.go:68","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-10-12 18:09:52.013","file":"dapphouse/main.go:68","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-10-12 18:09:53.015","file":"dapphouse/main.go:68","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-10-12 18:09:54.016","file":"dapphouse/main.go:68","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-10-12 18:09:55.019","file":"dapphouse/main.go:68","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-10-12 18:09:56.020","file":"dapphouse/main.go:68","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-10-12 18:09:57.022","file":"dapphouse/main.go:68","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-10-12 18:09:58.024","file":"dapphouse/main.go:68","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-10-12 18:09:59.029","file":"dapphouse/main.go:68","msg":"Waiting for the router, retry in 1 second."}
+{"level":"FATAL","timestamp":"2018-10-12 18:10:00.032","file":"dapphouse/main.go:47","msg":"the router has no response, or it might took too long to start up","data":{"error":"connect to the router error","trace":"goroutine 20 [running]:\ngithub.com/lexkong/log/lager.(*logger).logs(0xc4201daae0, 0xc4201b50c0, 0x2, 0x2, 0x4, 0x47d6bd8, 0x41, 0x4b01860, 0xc4201b1cf0, 0x0, ...)\n\t/Users/cflvince/go/src/github.com/lexkong/log/lager/logger.go:135 +0x865\ngithub.com/lexkong/log/lager.(*logger).log(0xc4201daae0, 0x4, 0x47d6bd8, 0x41, 0x4b01860, 0xc4201b1cf0, 0x0, 0x0, 0x0)\n\t/Users/cflvince/go/src/github.com/lexkong/log/lager/logger.go:123 +0xd9\ngithub.com/lexkong/log/lager.(*logger).Fatal(0xc4201daae0, 0x47d6bd8, 0x41, 0x4b01860, 0xc4201b1cf0, 0x0, 0x0, 0x0)\n\t/Users/cflvince/go/src/github.com/lexkong/log/lager/logger.go:197 +0x83\ngithub.com/lexkong/log.Fatal(0x47d6bd8, 0x41, 0x4b01860, 0xc4201b1cf0, 0x0, 0x0, 0x0)\n\t/Users/cflvince/go/src/github.com/lexkong/log/st_lager.go:162 +0x7e\nmain.main.func1()\n\t/Users/cflvince/go/src/dapphouse/main.go:47 +0xb0\ncreated by main.main\n\t/Users/cflvince/go/src/dapphouse/main.go:45 +0xed\n"}}
+{"level":"INFO","timestamp":"2018-10-12 18:12:05.920","file":"dapphouse/main.go:52","msg":"start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-10-12 18:12:05.921","file":"dapphouse/main.go:49","msg":"the router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-10-12 18:16:18.438","file":"dapphouse/main.go:52","msg":"start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-10-12 18:16:18.445","file":"dapphouse/main.go:49","msg":"the router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-10-12 18:18:45.578","file":"dapphouse/main.go:52","msg":"start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-10-12 18:18:45.579","file":"dapphouse/main.go:49","msg":"the router has been deployed successfully"}
+{"level":"INFO","timestamp":"2018-10-12 18:19:17.713","file":"demo/demo_handler.go:20","msg":"QueryDemoList req:\u0026demo.QueryReq{Limit:40, Start:0, Username:\"\", Password:\"\"}"}
+{"level":"INFO","timestamp":"2018-10-12 18:19:17.713","file":"demo/demo_dao.go:14","msg":"select id, username, password, create_time, update_time from demo where 1=1   order by id desc limit 0, 40"}
+{"level":"ERROR","timestamp":"2018-10-12 18:19:17.714","file":"demo/demo_dao.go:17","msg":"QueryDemoList error","data":{"error":"get database error"}}
+{"level":"INFO","timestamp":"2018-10-12 18:24:31.886","file":"mysql/mysql_exec.go:31","msg":"host:127.0.0.1, port:3306, schema:tron_dapphouse, username:root, password:root"}
+{"level":"INFO","timestamp":"2018-10-12 18:24:31.888","file":"dapphouse/main.go:52","msg":"start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-10-12 18:24:31.889","file":"dapphouse/main.go:49","msg":"the router has been deployed successfully"}
+{"level":"INFO","timestamp":"2018-10-12 18:24:51.052","file":"demo/demo_handler.go:20","msg":"QueryDemoList req:\u0026demo.QueryReq{Limit:40, Start:0, Username:\"\", Password:\"\"}"}
+{"level":"INFO","timestamp":"2018-10-12 18:24:51.052","file":"demo/demo_dao.go:14","msg":"select id, username, password, create_time, update_time from demo where 1=1   order by id desc limit 0, 40"}
+{"level":"ERROR","timestamp":"2018-10-12 18:24:51.052","file":"demo/demo_dao.go:17","msg":"QueryDemoList error","data":{"error":"get database error"}}
+{"level":"INFO","timestamp":"2018-10-12 18:25:05.349","file":"mysql/mysql_exec.go:31","msg":"host:127.0.0.1, port:3306, schema:tron_dapphouse, username:root, password:root"}
+{"level":"INFO","timestamp":"2018-10-12 18:25:05.352","file":"dapphouse/main.go:52","msg":"start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-10-12 18:25:05.357","file":"dapphouse/main.go:49","msg":"the router has been deployed successfully"}
+{"level":"INFO","timestamp":"2018-10-12 18:28:32.443","file":"mysql/mysql_exec.go:31","msg":"host:127.0.0.1, port:3306, schema:tron_dapphouse, username:root, password:root"}
+{"level":"INFO","timestamp":"2018-10-12 18:28:32.443","file":"dapphouse/main.go:52","msg":"start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-10-12 18:28:32.444","file":"dapphouse/main.go:49","msg":"the router has been deployed successfully"}
+{"level":"INFO","timestamp":"2018-10-12 18:28:38.182","file":"demo/demo_handler.go:20","msg":"QueryDemoList req:\u0026demo.QueryReq{Limit:40, Start:0, Username:\"\", Password:\"\"}"}
+{"level":"INFO","timestamp":"2018-10-12 18:28:38.182","file":"demo/demo_dao.go:14","msg":"select id, username, password, create_time, update_time from demo where 1=1   order by id desc limit 0, 40"}
+{"level":"ERROR","timestamp":"2018-10-12 18:28:38.182","file":"demo/demo_dao.go:17","msg":"QueryDemoList error","data":{"error":"get database error"}}
+{"level":"INFO","timestamp":"2018-10-12 18:30:51.195","file":"mysql/mysql_exec.go:31","msg":"host:127.0.0.1, port:3306, schema:tron_dapphouse, username:root, password:root"}
+{"level":"INFO","timestamp":"2018-10-12 18:30:51.195","file":"dapphouse/main.go:52","msg":"start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-10-12 18:30:51.197","file":"dapphouse/main.go:49","msg":"the router has been deployed successfully"}
+{"level":"INFO","timestamp":"2018-10-12 18:30:57.492","file":"demo/demo_handler.go:20","msg":"QueryDemoList req:\u0026demo.QueryReq{Limit:40, Start:0, Username:\"\", Password:\"\"}"}
+{"level":"INFO","timestamp":"2018-10-12 18:30:57.492","file":"demo/demo_dao.go:14","msg":"select id, username, password, create_time, update_time from demo where 1=1   order by id desc limit 0, 40"}
+{"level":"ERROR","timestamp":"2018-10-12 18:30:57.492","file":"mysql/mysql_base.go:211","msg":"open db error","data":{"error":"sql: unknown driver \"mysql\" (forgotten import?)"}}
+{"level":"ERROR","timestamp":"2018-10-12 18:30:57.492","file":"demo/demo_dao.go:17","msg":"QueryDemoList error","data":{"error":"get database error"}}
+{"level":"INFO","timestamp":"2018-10-12 18:39:53.553","file":"mysql/mysql_exec.go:31","msg":"host:127.0.0.1, port:3306, schema:tron_dapphouse, username:root, password:root"}
+{"level":"INFO","timestamp":"2018-10-12 18:39:53.554","file":"dapphouse/main.go:52","msg":"start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-10-12 18:39:53.555","file":"dapphouse/main.go:49","msg":"the router has been deployed successfully"}
+{"level":"INFO","timestamp":"2018-10-12 18:40:08.391","file":"demo/demo_handler.go:20","msg":"QueryDemoList req:\u0026demo.QueryReq{Limit:40, Start:0, Username:\"\", Password:\"\"}"}
+{"level":"INFO","timestamp":"2018-10-12 18:40:08.391","file":"demo/demo_dao.go:14","msg":"select id, username, password, create_time, update_time from demo where 1=1   order by id desc limit 0, 40"}
+{"level":"INFO","timestamp":"2018-10-12 18:40:08.391","file":"mysql/mysql_exec.go:79","msg":"dbConfig,:{mysql root:root@tcp(127.0.0.1:3306)/tron_dapphouse?charset=utf8 10 10}"}
+{"level":"ERROR","timestamp":"2018-10-12 18:40:08.391","file":"mysql/mysql_base.go:211","msg":"open db error","data":{"error":"sql: unknown driver \"mysql\" (forgotten import?)"}}
+{"level":"ERROR","timestamp":"2018-10-12 18:40:08.392","file":"demo/demo_dao.go:17","msg":"QueryDemoList error","data":{"error":"get database error"}}
+{"level":"INFO","timestamp":"2018-10-12 18:43:07.091","file":"mysql/mysql_exec.go:31","msg":"host:127.0.0.1, port:3306, schema:tron_dapphouse, username:root, password:root"}
+{"level":"INFO","timestamp":"2018-10-12 18:43:07.094","file":"dapphouse/main.go:52","msg":"start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-10-12 18:43:07.094","file":"dapphouse/main.go:68","msg":"Waiting for the router, retry in 1 second"}
+{"level":"INFO","timestamp":"2018-10-12 18:43:08.097","file":"dapphouse/main.go:49","msg":"the router has been deployed successfully"}
+{"level":"INFO","timestamp":"2018-10-12 18:43:30.674","file":"demo/demo_handler.go:20","msg":"QueryDemoList req:\u0026{40 0  }"}
+{"level":"INFO","timestamp":"2018-10-12 18:43:30.674","file":"demo/demo_dao.go:14","msg":"select id, username, password, create_time, update_time from demo where 1=1   order by id desc limit 0, 40"}
+{"level":"INFO","timestamp":"2018-10-12 18:43:30.674","file":"mysql/mysql_exec.go:79","msg":"dbConfig:{mysql root:root@tcp(127.0.0.1:3306)/tron_dapphouse?charset=utf8 10 10}"}
+{"level":"ERROR","timestamp":"2018-10-12 18:43:30.674","file":"mysql/mysql_base.go:211","msg":"open db error","data":{"error":"sql: unknown driver \"mysql\" (forgotten import?)"}}
+{"level":"ERROR","timestamp":"2018-10-12 18:43:30.674","file":"demo/demo_dao.go:17","msg":"QueryDemoList error","data":{"error":"get database error"}}
+{"level":"INFO","timestamp":"2018-10-12 19:22:23.579","file":"mysql/mysql_exec.go:31","msg":"host:127.0.0.1, port:3306, schema:tron_dapphouse, username:root, password:root"}
+{"level":"INFO","timestamp":"2018-10-12 19:22:23.582","file":"dapphouse/main.go:52","msg":"start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-10-12 19:22:23.598","file":"dapphouse/main.go:49","msg":"the router has been deployed successfully"}
+{"level":"INFO","timestamp":"2018-10-12 19:22:31.425","file":"demo/demo_handler.go:20","msg":"QueryDemoList req:\u0026{40 0  }"}
+{"level":"INFO","timestamp":"2018-10-12 19:22:31.425","file":"demo/demo_dao.go:14","msg":"select id, username, password, create_time, update_time from demo where 1=1   order by id desc limit 0, 40"}
+{"level":"INFO","timestamp":"2018-10-12 19:22:31.426","file":"mysql/mysql_exec.go:79","msg":"dbConfig:{mysql root:root@tcp(127.0.0.1:3306)/tron_dapphouse?charset=utf8 10 10}"}
+{"level":"ERROR","timestamp":"2018-10-12 19:22:31.427","file":"mysql/mysql_base.go:211","msg":"open db error","data":{"error":"sql: unknown driver \"mysql\" (forgotten import?)"}}
+{"level":"ERROR","timestamp":"2018-10-12 19:22:31.428","file":"demo/demo_dao.go:17","msg":"QueryDemoList error","data":{"error":"get database error"}}
+{"level":"INFO","timestamp":"2018-10-12 19:39:48.446","file":"dapphouse/main.go:52","msg":"start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-10-12 19:39:48.449","file":"dapphouse/main.go:49","msg":"the router has been deployed successfully"}
+{"level":"INFO","timestamp":"2018-10-12 19:39:58.450","file":"demo/demo_handler.go:20","msg":"QueryDemoList req:\u0026demo.QueryReq{Limit:40, Start:0, Username:\"\", Password:\"\"}"}
+{"level":"INFO","timestamp":"2018-10-12 19:39:58.451","file":"demo/demo_dao.go:14","msg":"select id, username, password, create_time, update_time from demo where 1=1   order by id desc limit 0, 40"}
+{"level":"DEBUG","timestamp":"2018-10-12 19:45:36.149","file":"demo/demo_dao.go:93","msg":"InsertDemo success, execute id: [1]"}
+{"level":"DEBUG","timestamp":"2018-10-12 19:46:32.818","file":"demo/demo_dao.go:93","msg":"InsertDemo success, execute id: [2]"}
+{"level":"DEBUG","timestamp":"2018-10-12 19:46:33.855","file":"demo/demo_dao.go:93","msg":"InsertDemo success, execute id: [3]"}
+{"level":"DEBUG","timestamp":"2018-10-12 19:46:35.366","file":"demo/demo_dao.go:93","msg":"InsertDemo success, execute id: [4]"}
+{"level":"INFO","timestamp":"2018-10-12 19:46:59.405","file":"demo/demo_handler.go:20","msg":"QueryDemoList req:\u0026demo.QueryReq{Limit:40, Start:0, Username:\"\", Password:\"\"}"}
+{"level":"INFO","timestamp":"2018-10-12 19:46:59.406","file":"demo/demo_dao.go:14","msg":"select id, username, password, create_time, update_time from demo where 1=1   order by id desc limit 0, 40"}
+{"level":"INFO","timestamp":"2018-10-12 19:47:16.918","file":"demo/demo_handler.go:20","msg":"QueryDemoList req:\u0026demo.QueryReq{Limit:40, Start:1, Username:\"\", Password:\"\"}"}
+{"level":"INFO","timestamp":"2018-10-12 19:47:16.919","file":"demo/demo_dao.go:14","msg":"select id, username, password, create_time, update_time from demo where 1=1   order by id desc limit 1, 40"}
+{"level":"INFO","timestamp":"2018-10-12 19:47:25.318","file":"demo/demo_handler.go:20","msg":"QueryDemoList req:\u0026demo.QueryReq{Limit:1, Start:1, Username:\"\", Password:\"\"}"}
+{"level":"INFO","timestamp":"2018-10-12 19:47:25.318","file":"demo/demo_dao.go:14","msg":"select id, username, password, create_time, update_time from demo where 1=1   order by id desc limit 1, 1"}
+{"level":"INFO","timestamp":"2018-10-12 19:47:31.628","file":"demo/demo_handler.go:20","msg":"QueryDemoList req:\u0026demo.QueryReq{Limit:40, Start:122, Username:\"\", Password:\"\"}"}
+{"level":"INFO","timestamp":"2018-10-12 19:47:31.628","file":"demo/demo_dao.go:14","msg":"select id, username, password, create_time, update_time from demo where 1=1   order by id desc limit 122, 40"}
+{"level":"INFO","timestamp":"2018-10-12 19:47:45.053","file":"demo/demo_handler.go:20","msg":"QueryDemoList req:\u0026demo.QueryReq{Limit:40, Start:0, Username:\"\", Password:\"\"}"}
+{"level":"INFO","timestamp":"2018-10-12 19:47:45.054","file":"demo/demo_dao.go:14","msg":"select id, username, password, create_time, update_time from demo where 1=1   order by id desc limit 0, 40"}
+{"level":"INFO","timestamp":"2018-10-12 19:48:54.752","file":"demo/demo_handler.go:20","msg":"QueryDemoList req:\u0026demo.QueryReq{Limit:40, Start:0, Username:\"\", Password:\"\"}"}
+{"level":"INFO","timestamp":"2018-10-12 19:48:54.753","file":"demo/demo_dao.go:14","msg":"select id, username, password, create_time, update_time from demo where 1=1   order by id desc limit 0, 40"}
+{"level":"INFO","timestamp":"2018-10-12 19:50:20.132","file":"demo/demo_handler.go:65","msg":"UpdateDemo bind err:invalid character ',' after object key"}
+{"level":"INFO","timestamp":"2018-10-12 19:50:57.573","file":"demo/demo_handler.go:65","msg":"UpdateDemo bind err:invalid character ',' after object key"}
+{"level":"INFO","timestamp":"2018-10-12 19:51:26.020","file":"demo/demo_handler.go:65","msg":"UpdateDemo bind err:json: cannot unmarshal string into Go struct field Demo.id of type int64"}
+{"level":"DEBUG","timestamp":"2018-10-12 19:51:51.986","file":"demo/demo_dao.go:107","msg":"UpdateDemo success, execute id: [0]"}
+{"level":"DEBUG","timestamp":"2018-10-12 19:52:23.859","file":"demo/demo_dao.go:107","msg":"UpdateDemo success, execute id: [0]"}
+{"level":"INFO","timestamp":"2018-10-12 19:58:55.409","file":"demo/demo_handler.go:85","msg":"DeleteDemoById req:1"}
+{"level":"INFO","timestamp":"2018-10-12 19:58:55.414","file":"demo/demo_dao.go:77","msg":"DeleteDemoById success, execute id: [0]"}
+{"level":"INFO","timestamp":"2018-10-12 19:59:07.096","file":"demo/demo_handler.go:85","msg":"DeleteDemoById req:4"}
+{"level":"INFO","timestamp":"2018-10-12 19:59:07.098","file":"demo/demo_dao.go:77","msg":"DeleteDemoById success, execute id: [0]"}
+{"level":"INFO","timestamp":"2018-10-12 20:54:07.611","file":"dapphouse/main.go:52","msg":"start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-10-12 20:54:07.612","file":"dapphouse/main.go:68","msg":"Waiting for the router, retry in 1 second"}
+{"level":"INFO","timestamp":"2018-10-12 20:54:08.617","file":"dapphouse/main.go:49","msg":"the router has been deployed successfully"}
+{"level":"INFO","timestamp":"2018-10-12 20:54:31.952","file":"demo/demo_handler.go:49","msg":"AddDemo bind req:{0 23232 333  }"}
+{"level":"INFO","timestamp":"2018-10-12 20:54:31.975","file":"demo/demo_dao.go:93","msg":"AddDemo success"}
+{"level":"INFO","timestamp":"2018-10-12 20:55:18.318","file":"dapphouse/main.go:52","msg":"start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-10-12 20:55:18.319","file":"dapphouse/main.go:49","msg":"the router has been deployed successfully"}
+{"level":"INFO","timestamp":"2018-10-12 20:55:38.860","file":"demo/demo_handler.go:49","msg":"AddDemo bind req:demo.Demo{Id:0, Username:\"23232\", Password:\"333\", CreateTime:\"\", UpdateTime:\"\"}"}
+{"level":"INFO","timestamp":"2018-10-12 20:55:38.863","file":"demo/demo_dao.go:93","msg":"AddDemo success"}

@@ -1,0 +1,23 @@
+run_mode: debug     # debug, release, test
+addr: :8080
+name: dapphouse
+url: http://127.0.0.1:8080
+max_ping_count: 10
+jwt_secret: Rtg8BPKNEf2mB4mgvKONGPZZQSaJWNLijxR42qRgq0iBb5
+log:
+  writers: file,stdout
+  logger_lever: DEBUG
+  logger_file: logs/dapphouse.log
+  log_format_text: false
+  rollingPolicy: size
+  log_rotate_date: 1
+  log_rotate_size: 1
+  log_backup_count: 7
+db:
+  schema: tron_dapphouse
+  host: 127.0.0.1
+  port: 3306
+  username: root
+  password: root
+dapphouse:
+  imagePath: /data/images/dapphouse
