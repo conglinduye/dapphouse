@@ -5,7 +5,7 @@ import (
 
 	"dapphouse/util"
 	"github.com/lexkong/log"
-	"dapphouse/service"
+	"dapphouse/service/demo"
 	"dapphouse/entity/demo"
 	"dapphouse/common/errno"
 	"dapphouse/handler"

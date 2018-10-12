@@ -7,7 +7,6 @@ import (
 	"github.com/lexkong/log"
 	"github.com/willf/pad"
 	"io/ioutil"
-	"regexp"
 	"time"
 	"dapphouse/handler"
 	"dapphouse/common/errno"
@@ -27,11 +26,6 @@ func Logging() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		start := time.Now().UTC()
 		path := c.Request.URL.Path
-
-		reg := regexp.MustCompile("(/v1/user|/login)")
-		if !reg.MatchString(path) {
-			return
-		}
 
 		if path == "/api/check/health" || path == "/api/check/ram" || path == "/api/check/cpu" || path == "/api/check/disk" {
 			return
@@ -62,7 +56,7 @@ func Logging() gin.HandlerFunc {
 
 		var response handler.Response
 		if err := json.Unmarshal(blw.body.Bytes(), &response); err != nil {
-			log.Errorf(err, "response body can not ummarshal to model.Response struct, body: `%s`", blw.body.Bytes())
+			log.Errorf(err, "response body can not ummarshal to handler.Response struct, body: `%s`", blw.body.Bytes())
 			code = errno.InternalServerError.Code
 			message = err.Error()
 		} else {
