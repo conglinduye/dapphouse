@@ -11,7 +11,7 @@ log:
   log_format_text: false
   rollingPolicy: size
   log_rotate_date: 1
-  log_rotate_size: 1
+  log_rotate_size: 50
   log_backup_count: 7
 db:
   schema: tron_dapphouse
