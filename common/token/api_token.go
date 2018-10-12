@@ -68,6 +68,7 @@ func Sign(ctx *gin.Context, c Context, secret string) (tokenString string, err e
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 		"id":       c.ID,
 		"username": c.Username,
+		"exp":		time.Now().Unix() + 60 * 30,
 		"nbf":      time.Now().Unix(),
 		"iat":      time.Now().Unix(),
 	})
