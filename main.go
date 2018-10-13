@@ -16,7 +16,7 @@ import (
 )
 
 var (
-	cfg	= pflag.StringP("config", "c", "", "server config file path.")
+	cfg	= pflag.StringP("config", "c", "", "server config file path")
 )
 
 func main() {

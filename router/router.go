@@ -17,7 +17,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	g.Use(mw...)
 
 	g.NoRoute(func(c *gin.Context) {
-		c.String(http.StatusNotFound, "The Incorrect API Route.")
+		c.String(http.StatusNotFound, "The Incorrect API Route")
 	})
 
 	// the health check handler
