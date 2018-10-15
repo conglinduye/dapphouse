@@ -8,6 +8,7 @@ import (
 	"dapphouse/util"
 )
 
+// QueryUserAccount
 func QueryUserAccount(userAccount *entity.UserAccount) (*entity.UserAccount, error) {
 	strSQL := fmt.Sprintf(`
 		select id, email, salt, pwd_crypt, status, create_time, update_time 
@@ -30,6 +31,31 @@ func QueryUserAccount(userAccount *entity.UserAccount) (*entity.UserAccount, err
 
 	}
 	return newUserAccount, nil
+}
+
+// QueryUserAccountByEmail
+func QueryUserAccountByEmail(email string) (*entity.UserAccount, error) {
+	strSQL := fmt.Sprintf(`
+		select id, email, salt, pwd_crypt, status, create_time, update_time 
+		from user_account where email = '%v'`, email)
+	dataPtr, err := mysql.QueryTableData(strSQL)
+	if err != nil {
+		log.Errorf(err,"QueryUserAccountByEmail error sql:%v", strSQL)
+		return nil, err
+	}
+
+	userAccount := &entity.UserAccount{}
+	for dataPtr.NextT() {
+		userAccount.Id = util.ConvertDBValueToInt64(dataPtr.GetField("id"))
+		userAccount.Email = dataPtr.GetField("email")
+		userAccount.Salt = dataPtr.GetField("salt")
+		userAccount.PwdCrypt = dataPtr.GetField("pwd_crypt")
+		userAccount.Status = util.ConvertDBValueToInt(dataPtr.GetField("status"))
+		userAccount.CreateTime = dataPtr.GetField("create_time")
+		userAccount.UpdateTime = dataPtr.GetField("update_time")
+
+	}
+	return userAccount, nil
 }
 
 // AddUserAccount
