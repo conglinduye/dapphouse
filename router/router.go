@@ -5,8 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"dapphouse/router/middleware"
-	check "dapphouse/handler/check"
-	demo "dapphouse/handler/demo"
+	"dapphouse/handler"
 )
 
 func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
@@ -23,20 +22,20 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	// the health check handler
 	checkGin := g.Group("api/check")
 	{
-		checkGin.GET("/health", check.HealthCheck)
-		checkGin.GET("/disk", check.DiskCheck)
-		checkGin.GET("/cpu", check.CPUCheck)
-		checkGin.GET("/ram", check.RAMCheck)
+		checkGin.GET("/health", handler.HealthCheck)
+		checkGin.GET("/disk", handler.DiskCheck)
+		checkGin.GET("/cpu", handler.CPUCheck)
+		checkGin.GET("/ram", handler.RAMCheck)
 	}
 
 	// demo handler
 	demoGin := g.Group("/api/demo")
 	{
-		demoGin.GET("/queryList", demo.QueryDemoList)
-		demoGin.GET("/queryById/:id", demo.QueryDemoById)
-		demoGin.POST("/add", demo.AddDemo)
-		demoGin.POST("/update", demo.UpdateDemo)
-		demoGin.DELETE("/delete/:id", demo.DeleteDemoById)
+		demoGin.GET("/queryList", handler.QueryDemoList)
+		demoGin.GET("/queryById/:id", handler.QueryDemoById)
+		demoGin.POST("/add", handler.AddDemo)
+		demoGin.POST("/update", handler.UpdateDemo)
+		demoGin.DELETE("/delete/:id", handler.DeleteDemoById)
 
 	}
 

@@ -1,13 +1,13 @@
 package service
 
 import (
-	"dapphouse/entity/demo"
+	"dapphouse/entity"
 	"fmt"
-	"dapphouse/dao/demo"
+	"dapphouse/dao"
 )
 
 // QueryDemoList
-func QueryDemoList(req *demo.QueryReq) (*demo.QueryResp, error) {
+func QueryDemoList(req *entity.QueryDemoReq) (*entity.QueryDemoResp, error) {
 	var filterSQL, sortSQL, pageSQL string
 	strSQL := fmt.Sprintf(`select id, username, password, create_time, update_time from demo where 1=1 `)
 
@@ -25,7 +25,7 @@ func QueryDemoList(req *demo.QueryReq) (*demo.QueryResp, error) {
 }
 
 // QueryDemoById
-func QueryDemoById(id string) (*demo.Demo, error)  {
+func QueryDemoById(id string) (*entity.Demo, error)  {
 	return dao.QueryDemoById(id)
 }
 
@@ -35,12 +35,12 @@ func DeleteDemoById(id string) error {
 }
 
 // AddDemo
-func AddDemo(demo *demo.Demo) error {
+func AddDemo(demo *entity.Demo) error {
 	return dao.AddDemo(demo)
 }
 
 // UpdateDemo
-func UpdateDemo(demo *demo.Demo) error {
+func UpdateDemo(demo *entity.Demo) error {
 	return dao.UpdateDemo(demo)
 }
 

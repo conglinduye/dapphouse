@@ -5,14 +5,14 @@ import (
 
 	"dapphouse/util"
 	"github.com/lexkong/log"
-	"dapphouse/service/demo"
-	"dapphouse/entity/demo"
 	"dapphouse/common/errno"
-	"dapphouse/handler"
+	"dapphouse/service"
+	"dapphouse/entity"
+	"github.com/wlcy/tron/explorer/web/handler"
 )
 
 func QueryDemoList(c *gin.Context) {
-	req := &demo.QueryReq{}
+	req := &entity.QueryDemoReq{}
 	req.Start = util.ConvertStringToInt64(c.Query("start"), 0)
 	req.Limit = util.ConvertStringToInt64Limit(c.Query("limit"), 40, 100)
 	req.Username = c.Query("username")
@@ -21,10 +21,10 @@ func QueryDemoList(c *gin.Context) {
 
 	queryResp, err := service.QueryDemoList(req)
 	if err != nil {
-		handler.SendResponse(c, err, nil)
+		SendResponse(c, err, nil)
 		return
 	}
-	handler.SendResponse(c, nil, queryResp)
+	SendResponse(c, nil, queryResp)
 }
 
 func QueryDemoById(c *gin.Context) {
@@ -40,7 +40,7 @@ func QueryDemoById(c *gin.Context) {
 }
 
 func AddDemo(c *gin.Context) {
-	var demo demo.Demo
+	var demo entity.Demo
 	if err := c.Bind(&demo); err != nil {
 		log.Infof("AddDemo bind err:%#v", err)
 		handler.SendResponse(c, errno.ErrBind, nil)
@@ -61,7 +61,7 @@ func AddDemo(c *gin.Context) {
 }
 
 func UpdateDemo(c *gin.Context) {
-	var demo demo.Demo
+	var demo entity.Demo
 	if err := c.Bind(&demo); err != nil {
 		log.Infof("UpdateDemo bind err:%v", err)
 		handler.SendResponse(c, errno.ErrBind, nil)

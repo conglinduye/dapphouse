@@ -1,13 +1,13 @@
-package demo
+package entity
 
-type QueryReq struct {
+type QueryDemoReq struct {
 	Limit     	int64  		`json:"limit,omitempty"`
 	Start     	int64  		`json:"start,omitempty"`
 	Username	string 		`json:"username,omitempty"`
 	Password	string		`json:"password,omitempty"`
 }
 
-type QueryResp struct {
+type QueryDemoResp struct {
 	Total 		int64		`json:"total"`
 	Data 		[]*Demo		`json:"data"`
 }

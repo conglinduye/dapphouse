@@ -1,7 +1,7 @@
 package dao
 
 import (
-	"dapphouse/entity/demo"
+	"dapphouse/entity"
 	"github.com/lexkong/log"
 	"dapphouse/common/mysql"
 	"dapphouse/util"
@@ -9,7 +9,7 @@ import (
 )
 
 // QueryDemoList
-func QueryDemoList(strSQL, filterSQL, sortSQL, pageSQL string) (*demo.QueryResp, error) {
+func QueryDemoList(strSQL, filterSQL, sortSQL, pageSQL string) (*entity.QueryDemoResp, error) {
 	strFullSQL := strSQL + " " + filterSQL + " " + sortSQL + " " + pageSQL
 	log.Info(strFullSQL)
 	dataPtr, err := mysql.QueryTableData(strFullSQL)
@@ -18,11 +18,11 @@ func QueryDemoList(strSQL, filterSQL, sortSQL, pageSQL string) (*demo.QueryResp,
 		return nil, err
 	}
 
-	demoResp := &demo.QueryResp{}
-	demoList := make([]*demo.Demo, 0)
+	demoResp := &entity.QueryDemoResp{}
+	demoList := make([]*entity.Demo, 0)
 
 	for dataPtr.NextT() {
-		demo := &demo.Demo{}
+		demo := &entity.Demo{}
 		demo.Id = util.ConvertDBValueToInt64(dataPtr.GetField("id"))
 		demo.Username = dataPtr.GetField("username")
 		demo.Password = dataPtr.GetField("password")
@@ -44,7 +44,7 @@ func QueryDemoList(strSQL, filterSQL, sortSQL, pageSQL string) (*demo.QueryResp,
 	return demoResp, nil
 }
 
-func QueryDemoById(id string) (*demo.Demo, error) {
+func QueryDemoById(id string) (*entity.Demo, error) {
 	strSQL := fmt.Sprintf(`
 		select id, username, password, create_time, update_time from demo where id = %v`, id)
 	dataPtr, err := mysql.QueryTableData(strSQL)
@@ -53,7 +53,7 @@ func QueryDemoById(id string) (*demo.Demo, error) {
 		return nil, err
 	}
 
-	demo := &demo.Demo{}
+	demo := &entity.Demo{}
 	for dataPtr.NextT() {
 		demo.Id = util.ConvertDBValueToInt64(dataPtr.GetField("id"))
 		demo.Username = dataPtr.GetField("username")
@@ -79,7 +79,7 @@ func DeleteDemoById(id string) error {
 }
 
 // AddDemo
-func AddDemo(demo *demo.Demo) error {
+func AddDemo(demo *entity.Demo) error {
 	strSQL := fmt.Sprintf(`
 		insert into demo 
 		(username, password)
@@ -95,7 +95,7 @@ func AddDemo(demo *demo.Demo) error {
 }
 
 // InsertDemo
-func UpdateDemo(demo *demo.Demo) error {
+func UpdateDemo(demo *entity.Demo) error {
 	strSQL := fmt.Sprintf(`
 		update demo set username = '%v', password='%v' where id = %v`,
 		demo.Username, demo.Password, demo.Id)
