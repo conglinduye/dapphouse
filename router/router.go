@@ -20,23 +20,29 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	})
 
 	// the health check handler
-	checkGin := g.Group("api/check")
+	check := g.Group("/api/check")
 	{
-		checkGin.GET("/health", handler.HealthCheck)
-		checkGin.GET("/disk", handler.DiskCheck)
-		checkGin.GET("/cpu", handler.CPUCheck)
-		checkGin.GET("/ram", handler.RAMCheck)
+		check.GET("/health", handler.HealthCheck)
+		check.GET("/disk", handler.DiskCheck)
+		check.GET("/cpu", handler.CPUCheck)
+		check.GET("/ram", handler.RAMCheck)
 	}
 
 	// demo handler
-	demoGin := g.Group("/api/demo")
+	demo := g.Group("/api/demo")
 	{
-		demoGin.GET("/queryList", handler.QueryDemoList)
-		demoGin.GET("/queryById/:id", handler.QueryDemoById)
-		demoGin.POST("/add", handler.AddDemo)
-		demoGin.POST("/update", handler.UpdateDemo)
-		demoGin.DELETE("/delete/:id", handler.DeleteDemoById)
+		demo.GET("/queryList", handler.QueryDemoList)
+		demo.GET("/queryById/:id", handler.QueryDemoById)
+		demo.POST("/add", handler.AddDemo)
+		demo.POST("/update", handler.UpdateDemo)
+		demo.DELETE("/delete/:id", handler.DeleteDemoById)
+	}
 
+	// account handler
+	account := g.Group("/api/account/user")
+	{
+		account.POST("/register", handler.RegisterUserAccount)
+		account.POST("/login", handler.LoginUserAccount)
 	}
 
 	return g
