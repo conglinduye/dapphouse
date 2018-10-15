@@ -48,8 +48,8 @@ DROP TABLE IF EXISTS `dapp_contract`;
 CREATE TABLE `dapp_contract` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `dapp_id` int(10) NOT NULL COMMENT 'dappid',
-  `mainnet` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'mainnet',
-  `testnet` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'testnet',
+  `address` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'mainnet',
+  `type`  tinyint(4) NOT NULL DEFAULT 1 COMMENT 'testnet',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='dapp_contract表';
 
@@ -85,6 +85,18 @@ CREATE TABLE `dapp_preview` (
   `status` tinyint(4) NOT NULL DEFAULT '1' COMMENT '状态 0:删除, 1:正常',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='dapp_preview表';
+
+-- ----------------------------
+-- Table structure for dapp_preview
+-- ----------------------------
+DROP TABLE IF EXISTS `dapp_cate`;
+CREATE TABLE `dapp_cate` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'name',
+  `code` tinyint(4) NOT NULL COMMENT 'code',
+  `status` tinyint(4) NOT NULL DEFAULT '1' COMMENT '状态 0:删除, 1:正常',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='dapp分类表';
 
 -- ----------------------------
 -- Table structure for demo
